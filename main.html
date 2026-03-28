@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Brownies da Soso</title>
+
+		<style>
+			/* Reset: limpa as margens padrão do navegador */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* Body: Fundo cor-de-rosa e texto castanho escuro */
+			body {
+				font-family: sans-serif;
+				background-color: #ffccda; /* Rosa claro, como na Imagem 1 */
+				color: #4a2c2a; /* Castanho escuro, cor de chocolate */
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			h1, h2, h3 {
+				font-family: serif; 
+				color: #4a2c2a; 
+			}
+
+			/* Cabeçalho: fundo castanho e texto branco para destacar */
+			header {
+				background-color: #4a2c2a;
+				color: #ffffff;
+				text-align: center;
+				padding: 30px 20px;
+				border-bottom-left-radius: 20px; /* Arredonda as pontas em baixo */
+				border-bottom-right-radius: 20px;
+				margin-bottom: 40px;
+			}
+
+			header p {
+				margin-bottom: 20px;
+			}
+
+			/* Flexbox: coloca os links do menu lado a lado */
+			nav ul {
+				list-style: none;
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+			}
+
+			/* Links do menu pintados de cor-de-rosa */
+			nav a {
+				text-decoration: none;
+				color: #ffccda;
+				font-weight: bold;
+				font-size: 1.1em;
+			}
+
+			/* Espaço lateral nas secções para o texto não colar ao ecrã */
+			section {
+				margin-bottom: 50px;
+				padding: 0 20px;
+			}
+
+			section h2 {
+				border-bottom: 3px solid #4a2c2a; /* Linha grossa castanha */
+				padding-bottom: 5px;
+				margin-bottom: 20px;
+			}
+
+			/* Flexbox: cria a grelha de cartões */
+			.menu-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+
+			/* Cartões brancos com borda castanha para os produtos destacarem */
+			article {
+				background-color: #ffffff;
+				border: 2px solid #4a2c2a;
+				border-radius: 15px; /* Cantos arredondados */
+				padding: 20px;
+				width: 30%;
+				min-width: 200px;
+			}
+
+			article h3 {
+				margin-bottom: 10px;
+			}
+
+			article p {
+				margin-bottom: 10px;
+			}
+
+			/* Um rosa mais escuro/avermelhado para o preço chamar a atenção */
+			article .preco {
+				font-weight: bold;
+				color: #d1495b;
+				font-size: 1.1em;
+			}
+
+			/* Formulário: empilha os campos na vertical */
+			form {
+				display: flex;
+				flex-direction: column;
+				max-width: 400px;
+			}
+
+			form label {
+				margin-top: 10px;
+				font-weight: bold;
+			}
+
+			form input, form textarea {
+				padding: 8px;
+				border: 2px solid #4a2c2a;
+				border-radius: 5px; /* Caixas de texto ligeiramente arredondadas */
+			}
+
+			/* Botão castanho a condizer com o tema */
+			form button {
+				margin-top: 15px;
+				padding: 10px;
+				background-color: #4a2c2a;
+				color: #ffffff;
+				border: none;
+				border-radius: 5px;
+				width: 100px;
+				font-weight: bold;
+			}
+
+			/* Rodapé a condizer com o cabeçalho */
+			footer {
+				background-color: #4a2c2a;
+				color: #ffffff;
+				text-align: center;
+				padding: 20px;
+				border-top-left-radius: 20px; /* Arredonda as pontas em cima */
+				border-top-right-radius: 20px;
+				margin-top: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Cabeçalho e Navegação -->
+		<header>
+			<h1>Brownies da Soso</h1>
+			<p>O cardápio mais doce e feito com carinho</p>
+
+			<nav>
+				<ul>
+					<li><a href="#inicio">Início</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#sobre">Sobre Nós</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Conteúdo Principal -->
+		<main>
+			<section id="inicio">
+				<h2>Bem-vindo!</h2>
+				<p>Explore o nosso cardápio e descubra os melhores brownies da cidade. Cada pedacinho é preparado com muito amor e ingredientes selecionados.</p>
+			</section>
+
+			<section id="menu">
+				<h2>Nosso Cardápio</h2>
+				
+				<div class="menu-container">
+					<article>
+						<h3>Brownie Simples</h3>
+						<p>Quadradinho de brownie recheado (70g).</p>
+						<p class="preco">R$ 7,00</p>
+					</article>
+
+					<article>
+						<h3>Fatia de Brownie</h3>
+						<p>Fatia caprichada com diversos sabores à sua escolha.</p>
+						<p class="preco">R$ 18,00</p>
+					</article>
+
+					<article>
+						<h3>Brownie no Copo</h3>
+						<p>O copo da felicidade com brownie e muito recheio.</p>
+						<p class="preco">R$ 15,00</p>
+					</article>
+
+					<!-- Adicionei os dois itens que faltavam da sua imagem! -->
+					<article>
+						<h3>Brookie</h3>
+						<p>A junção perfeita entre brownie e cookie (60g - 70g).</p>
+						<p class="preco">R$ 10,00</p>
+					</article>
+
+					<article>
+						<h3>Mini brownies</h3>
+						<p>Perfeito para encomendar para festas. (Mínimo 10 un.)</p>
+						<p class="preco">R$ 4,50</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="sobre">
+				<h2>Sobre Nós</h2>
+				<p>A Brownies da Soso nasceu da paixão por chocolates e do desejo de levar alegria em formato de doce para a sua vida. O nosso maior prazer é adoçar o seu dia a dia!</p>
+			</section>
+
+			<section id="contato">
+				<h2>Contato</h2>
+				<form>
+					<label for="nome">Nome</label>
+					<input type="text" id="nome" name="nome" />
+					
+					<label for="email">E-mail</label>
+					<input type="email" id="email" name="email" />
+					
+					<label for="msg">Mensagem / Encomenda</label>
+					<textarea id="msg" name="msg" rows="4"></textarea>
+					
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+
+		<!-- Rodapé -->
+		<footer>
+			<p>© 2024 Brownies da Soso. Todos os direitos reservados.</p>
+		</footer>
+	</body>
+</html>
