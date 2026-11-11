@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brownies da Soso — cortado na hora</title>
+    <meta
+      name="description"
+      content="Brownies artesanais assados em pequenos lotes e cortados na hora. Cardápio, encomendas e caixas para festa."
+    />
+    <meta name="theme-color" content="#17100c" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="pular" href="#cardapio">Pular para o cardápio</a>
+
+    <header class="topo">
+      <a class="marca" href="#topo">
+        <span class="marca-quadro" aria-hidden="true"></span>
+        Brownies da Soso
+      </a>
+      <nav class="menu" aria-label="Seções">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#corte">O corte</a>
+        <a href="#historia">História</a>
+        <a class="menu-pedido" href="#encomenda">Encomendar</a>
+      </nav>
+    </header>
+
+    <main id="topo">
+      <!-- A ASSADEIRA: o brownie inteiro é cortado conforme a página desce -->
+      <section class="abertura">
+        <div class="abertura-fixa">
+          <div class="assadeira" aria-hidden="true">
+            <div class="massa"></div>
+            <div class="cortes">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+            <div class="vapor"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="abertura-texto">
+            <p class="etiqueta">assado hoje · cortado agora</p>
+            <h1>
+              Sai da<br />
+              assadeira<br />
+              <em>quente.</em>
+            </h1>
+            <p class="chamada">
+              Casquinha que estala, meio que cede. Feito em lotes pequenos porque
+              brownie bom não espera na prateleira.
+            </p>
+            <div class="abertura-botoes">
+              <a class="botao" href="#cardapio">Ver o cardápio</a>
+              <a class="link-seta" href="#corte">Como cortamos</a>
+            </div>
+          </div>
+
+          <p class="role" aria-hidden="true">role para cortar</p>
+        </div>
+      </section>
+
+      <!-- CARDÁPIO: a assadeira vista de cima, cada peça é um produto -->
+      <section class="cardapio" id="cardapio">
+        <header class="secao-topo">
+          <div>
+            <p class="etiqueta">cinco pedaços</p>
+            <h2>O cardápio.</h2>
+          </div>
+          <p class="secao-nota">
+            Todo dia sai fornada. O que muda é o recheio — a gente avisa no
+            fechamento do pedido.
+          </p>
+        </header>
+
+        <div class="filtros" role="group" aria-label="Filtrar cardápio">
+          <button class="filtro ativo" type="button" data-filtro="tudo">Tudo</button>
+          <button class="filtro" type="button" data-filtro="unidade">Por unidade</button>
+          <button class="filtro" type="button" data-filtro="caixa">Para dividir</button>
+        </div>
+
+        <ul class="grade" data-grade>
+          <li class="peca peca-larga" data-cat="unidade" data-nome="Brownie Simples" data-preco="7">
+            <div class="peca-face">
+              <span class="peca-num">01</span>
+              <div class="peca-corte" aria-hidden="true"></div>
+            </div>
+            <div class="peca-info">
+              <h3>Brownie Simples</h3>
+              <p>Quadradinho recheado, 70g. O clássico da casa.</p>
+              <div class="peca-fim">
+                <strong>R$ 7,00</strong>
+                <button class="add" type="button" aria-label="Adicionar Brownie Simples">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="peca" data-cat="caixa" data-nome="Fatia de Brownie" data-preco="18">
+            <div class="peca-face face-fatia">
+              <span class="peca-num">02</span>
+              <div class="peca-camadas" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="peca-info">
+              <h3>Fatia de Brownie</h3>
+              <p>Fatia caprichada, sabor à sua escolha. Serve bem dois.</p>
+              <div class="peca-fim">
+                <strong>R$ 18,00</strong>
+                <button class="add" type="button" aria-label="Adicionar Fatia de Brownie">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="peca" data-cat="unidade" data-nome="Brownie no Copo" data-preco="15">
+            <div class="peca-face face-copo">
+              <span class="peca-num">03</span>
+              <div class="copo" aria-hidden="true"><i></i><i></i></div>
+            </div>
+            <div class="peca-info">
+              <h3>Brownie no Copo</h3>
+              <p>Camadas de brownie e creme. Come de colher, sem pressa.</p>
+              <div class="peca-fim">
+                <strong>R$ 15,00</strong>
+                <button class="add" type="button" aria-label="Adicionar Brownie no Copo">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="peca" data-cat="unidade" data-nome="Brookie" data-preco="10">
+            <div class="peca-face face-brookie">
+              <span class="peca-num">04</span>
+              <div class="brookie" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="peca-info">
+              <h3>Brookie</h3>
+              <p>Cookie em cima, brownie embaixo. 60g a 70g de indecisão resolvida.</p>
+              <div class="peca-fim">
+                <strong>R$ 10,00</strong>
+                <button class="add" type="button" aria-label="Adicionar Brookie">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="peca peca-larga" data-cat="caixa" data-nome="Mini Brownies" data-preco="4.5">
+            <div class="peca-face face-mini">
+              <span class="peca-num">05</span>
+              <div class="mini" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="peca-info">
+              <h3>Mini Brownies</h3>
+              <p>Para festa e para caixa. Mínimo de 10 unidades.</p>
+              <div class="peca-fim">
+                <strong>R$ 4,50 <span>/un.</span></strong>
+                <button class="add" type="button" aria-label="Adicionar Mini Brownies">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- O CORTE: as camadas, reveladas conforme desce -->
+      <section class="corte" id="corte">
+        <div class="corte-fixo">
+          <div class="corte-texto">
+            <p class="etiqueta clara">de baixo para cima</p>
+            <h2>Três camadas<br />e nenhum atalho.</h2>
+            <ol class="camadas-lista">
+              <li><span>01</span><b>Base densa</b>Chocolate derretido, não achocolatado em pó.</li>
+              <li><span>02</span><b>Recheio no meio</b>Entra ainda morno, para não afundar.</li>
+              <li><span>03</span><b>Casca fina</b>O estalo que você ouve na primeira mordida.</li>
+            </ol>
+          </div>
+
+          <div class="corte-peca" aria-hidden="true">
+            <div class="camada camada-base"></div>
+            <div class="camada camada-recheio"></div>
+            <div class="camada camada-casca"></div>
+            <div class="farelo f1"></div>
+            <div class="farelo f2"></div>
+            <div class="farelo f3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTÓRIA -->
+      <section class="historia" id="historia">
+        <blockquote class="citacao">
+          <p>Era uma assadeira só, para a família. A encomenda apareceu antes da vontade de vender.</p>
+        </blockquote>
+
+        <div class="numeros">
+          <div><b data-conta="2019">0</b><span>desde</span></div>
+          <div><b data-conta="5">0</b><span>sabores fixos</span></div>
+          <div><b data-conta="48">0</b><span>horas de antecedência</span></div>
+        </div>
+
+        <div class="valores">
+          <article><h3>Lote pequeno</h3><p>A gente assa pouco de propósito. Brownie parado perde a graça e a textura.</p></article>
+          <article><h3>Chocolate de verdade</h3><p>Barra derretida, manteiga e ovo. Sem mistura pronta, sem gordura estranha.</p></article>
+          <article><h3>Corte na hora</h3><p>Só cortamos quando o pedido fecha, para a borda não secar antes de chegar.</p></article>
+        </div>
+      </section>
+
+      <!-- ENCOMENDA -->
+      <section class="encomenda" id="encomenda">
+        <header class="secao-topo">
+          <div>
+            <p class="etiqueta">a sua caixa</p>
+            <h2>Monte o pedido.</h2>
+          </div>
+          <p class="secao-nota">
+            Escolha no cardápio acima e conte o resto aqui. Respondemos com o
+            valor fechado e a data.
+          </p>
+        </header>
+
+        <div class="encomenda-corpo">
+          <form class="formulario" data-form novalidate>
+            <div class="linha-dupla">
+              <label>
+                Seu nome
+                <input type="text" name="nome" autocomplete="name" required placeholder="Como te chamamos" />
+              </label>
+              <label>
+                Para quando
+                <input type="date" name="data" required />
+              </label>
+            </div>
+            <label>
+              WhatsApp
+              <input type="tel" name="fone" inputmode="tel" required placeholder="(00) 00000-0000" />
+            </label>
+            <label>
+              Detalhes
+              <textarea name="obs" rows="4" placeholder="Sabores, restrições, se é para festa..."></textarea>
+            </label>
+            <button class="botao" type="submit">Fechar resumo</button>
+            <p class="aviso" data-aviso role="status"></p>
+          </form>
+
+          <aside class="caixa" aria-live="polite">
+            <div class="caixa-topo">
+              <span>Sua caixa</span>
+              <b data-qtd>vazia</b>
+            </div>
+            <ul data-lista>
+              <li class="caixa-vazia">Nada escolhido ainda.</li>
+            </ul>
+            <div class="caixa-total">
+              <span>Estimativa</span>
+              <strong data-total>R$ 0,00</strong>
+            </div>
+            <p class="caixa-nota">Valor confirmado na resposta do pedido.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- DÚVIDAS -->
+      <section class="duvidas">
+        <h2>Antes de pedir.</h2>
+        <div class="duvidas-lista">
+          <details>
+            <summary>Com quanta antecedência preciso pedir?<i aria-hidden="true"></i></summary>
+            <p>Quarenta e oito horas para caixas e festas. Unidades avulsas, depende da fornada do dia.</p>
+          </details>
+          <details>
+            <summary>Dá para misturar sabores na caixa?<i aria-hidden="true"></i></summary>
+            <p>Dá. A gente confirma quais estão disponíveis no dia do fechamento.</p>
+          </details>
+          <details>
+            <summary>Vocês entregam?<i aria-hidden="true"></i></summary>
+            <p>Combinamos retirada ou entrega conforme o endereço e a data.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo dura?<i aria-hidden="true"></i></summary>
+            <p>Três dias em pote fechado. Mas isso nunca foi testado até o fim por aqui.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p class="rodape-frase">Feito devagar,<br />acaba depressa.</p>
+      <div class="rodape-fim">
+        <a href="#topo">Voltar ao topo</a>
+        <p>© <span data-ano></span> Brownies da Soso</p>
+      </div>
+    </footer>
+
+    <div class="aviso-flutuante" data-toast role="status" aria-live="polite"></div>
+  </body>
+</html>
